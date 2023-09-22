@@ -1,0 +1,16 @@
+homework: main.o complex_class.o complex_sort.o result clean
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+complex_class.o: complex_class.cpp
+	g++ -c complex_class.cpp
+
+complex_sort.o: complex_sort.cpp
+	g++ -c complex_sort.cpp
+
+result:
+	g++ main.o complex_class.o complex_sort.o -o homework
+
+clean:
+	rm *.o 
